@@ -6,6 +6,7 @@ const app = express();
 const bebidaRoutes = require('./routes/bebidaRoute');
 const ingredienteRoutes = require('./routes/ingredienteRoutes')
 const authRoutes = require('./routes/auth');
+const favoritosRoutes = require('./routes/favoritoRoute');
 
 // Middlewares
 app.use(cors()); // Libera acesso externo (como o app mobile)
@@ -15,7 +16,7 @@ app.use(express.json()); // Permite ler JSON no corpo das requisições
 app.use('/bebidas', bebidaRoutes);
 app.use('/ingredientes', ingredienteRoutes);
 app.use('/', authRoutes);
-
+app.use('/favoritos', favoritosRoutes);
 
 // Inicia o servidor
 app.listen(3000, () => {
