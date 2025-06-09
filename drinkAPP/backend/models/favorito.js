@@ -12,7 +12,6 @@ const Favorito = {
   },
 
   listar: (id_usuario, callback) => {
-    // só id_usuario aqui
     const query = 'SELECT * FROM favoritos WHERE id_usuario = ?';
     db.query(query, [id_usuario], callback);
   }
