@@ -9,7 +9,7 @@ const authRoutes = require('./routes/auth');
 const favoritosRoutes = require('./routes/favoritoRoute');
 
 // Middlewares
-app.use(cors()); // Libera acesso externo (como o app mobile)
+app.use(cors()); // Libera a cesso externo (como o app mobile)
 app.use(express.json()); // Permite ler JSON no corpo das requisições
 
 // Rotas da API
